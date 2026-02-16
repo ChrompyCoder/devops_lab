@@ -43,7 +43,7 @@ jobs:
         run: npm install # Even if the folder is empty, this is good practice
 
       - name: Run Unit Tests
-        run: node test
+        run: node stringutils.test.js
 
       - name: Run Security Check
         run: node app.js
