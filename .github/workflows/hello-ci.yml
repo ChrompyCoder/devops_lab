@@ -27,17 +27,17 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
         # --- THIS IS THE MATRIX SECTION ---
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x]
+    # strategy:
+    #   matrix:
+    #     node-version: 20.x
     # ----------------------------------
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+      # - name: Use Node.js ${{ matrix.node-version }}
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '20'
 
       - name: Install Dependencies
         run: npm install # Even if the folder is empty, this is good practice
