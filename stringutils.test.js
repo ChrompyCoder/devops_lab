@@ -1,4 +1,4 @@
-const { capitalize, reverse } = require('./stringUtils');
+const { capitalize, reverse } = require('./stringutils');
    
    test('capitalize first letter', () => {
        expect(capitalize('hello')).toBe('Hello');
